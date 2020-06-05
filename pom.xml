@@ -48,6 +48,23 @@
     		<version>1.16.22</version>
     		<scope>provided</scope>
 		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+    <version>Greenwich.SR6</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter</artifactId>
+<version>2.1.6.RELEASE</version>    
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-cloud-connectors</artifactId>
+</dependency>
 	</dependencies>
 
 	<build>
@@ -56,6 +73,34 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			
+			<!--  Added for cloud foundy -->
+			<plugin>                        
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <finalName>${project.name}-cf</finalName>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <excludes>
+                    <exclude>**/cloud/config/*.java</exclude>
+                </excludes>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <excludes>
+                    <exclude>**/cloud/*.java</exclude>
+                </excludes>
+            </configuration>
+        </plugin>
 		</plugins>
 	</build>
 
