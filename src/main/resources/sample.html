@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<SCRIPT LANGUAGE=JAVASCRIPT>
+
+function UserAction() {
+    var xhttp = new XMLHttpRequest();
+
+	var studentId = "Student2"; 
+	//const url = "http://localhost:8080/students/"+studentId+"/courses";
+
+	const url = "http://localhost:8097/user/userList";
+
+    xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+            var myArr = JSON.parse(this.responseText);
+
+			 appendData(myArr);
+         }
+    };	
+
+//    xhttp.open("POST", url, true);
+	    xhttp.open("GET", url, true);
+	
+	xhttp.send();
+}
+
+ function appendData(data) {
+ 
+ alert(data);
+            var mainContainer = document.getElementById("myData");
+			 alert(data.length);
+
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'lastName: ' + data[i].lastName + ' firstName : ' + data[i].firstName+" userId :"+ data[i].userId+
+                " password :"+ data[i].password+" email :"+ data[i].email+" category :"+ data[i].category;            	
+            	
+                mainContainer.appendChild(div);
+            }
+        }
+
+</SCRIPT>
+<BODY>
+<button type="submit" onclick="UserAction()">Search</button>
+
+<body>
+  <div id="myData"></div>
+</body>
+</BODY>
+</HTML>
