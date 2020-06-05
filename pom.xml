@@ -50,21 +50,17 @@
 		</dependency>
 		
 		<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-    <version>Greenwich.SR6</version>
-            <type>pom</type>
-            <scope>import</scope>
+            <groupId>com.ibm.cloud</groupId>
+            <artifactId>ibm-cloud-spring-boot-service-bind</artifactId>
+            <version>1.1.2</version>
         </dependency>
-        <dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter</artifactId>
-<version>2.1.6.RELEASE</version>    
-</dependency>
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-cloud-connectors</artifactId>
-</dependency>
+		
+		<dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.26</version>
+        </dependency>
+		
 	</dependencies>
 
 	<build>
@@ -73,34 +69,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
-			
-			<!--  Added for cloud foundy -->
-			<plugin>                        
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-            <configuration>
-                <finalName>${project.name}-cf</finalName>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <excludes>
-                    <exclude>**/cloud/config/*.java</exclude>
-                </excludes>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <excludes>
-                    <exclude>**/cloud/*.java</exclude>
-                </excludes>
-            </configuration>
-        </plugin>
 		</plugins>
 	</build>
 
