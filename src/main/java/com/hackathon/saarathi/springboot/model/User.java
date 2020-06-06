@@ -10,14 +10,14 @@ public class User {
 
 	private String lastName;
 
-	//private Long phoneNumber;
+	private Long phoneNumber;
 	
-	//private Long userId;
+	private Long userId;
 
-	//private String password;
+	private String password;
 
-	//private String email;
+	private String email;
 
-	//private String category;
+	private String category;
 	
 }

@@ -1,5 +1,70 @@
-{
-"firstName" : "jaya",
+[{
+"firstName" : "sapna",
 
-"lastName" : "wagaskar"	
+"lastName" : "ghule",
+
+"phoneNumber" : "9922345678",
+	
+"userId" : "1",
+
+"password" : "saarathi",
+
+"email" : "abc@abc.com",
+
+"category" : "Requester"
+
+	},
+	{
+"firstName" : "anu",
+
+"lastName" : "more",
+
+"phoneNumber" : "9927645678",
+	
+"userId" : "2",
+
+"password" : "dream",
+
+"email" : "xyz@abc.com",
+
+"category" : "Requester"
+
+	},
+	
+	{
+"firstName" : "sonali",
+
+"lastName" : "ghote",
+
+"phoneNumber" : "9927645678",
+	
+"userId" : "3",
+
+"password" : "dream2",
+
+"email" : "sagg@abc.com",
+
+"category" : "admin"
+
+	},
+	
+	{
+"firstName" : "sanjay",
+
+"lastName" : "khadke",
+
+"phoneNumber" : "9926745678",
+	
+"userId" : "3",
+
+"password" : "sdsfdfd",
+
+"email" : "cfvhb@abc.com",
+
+"category" : "FulFiller"
+
 	}
+	
+	
+	
+	]
