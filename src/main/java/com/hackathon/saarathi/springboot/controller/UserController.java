@@ -26,8 +26,10 @@ public class UserController {
 	UserService userService;
 	
 	@GetMapping(value = "/userList")
-	public List<User> getUsers() {
-		return userService.findAll();
+	public void getUsers() {
+		
+		System.out.println("Hello");
+		//return userService.findAll();
 	
 	}
 	

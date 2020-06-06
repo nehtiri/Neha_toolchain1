@@ -13,12 +13,14 @@ import com.hackathon.saarathi.springboot.entity.User;
 
 @Component
 public class UserServiceImpl implements UserService{
-	@Resource 
-	UserDao userDao;
-	@Override
-	public List<User> findAll() {
-		return userDao.findAll();
-	}
+	
+	//@Resource 
+	//UserDao userDao;
+	
+	//@Override
+	//public List<User> findAll() {
+		//return userDao.findAll();
+	//}
 	
 	/*@Override
 	public void insertUser(User emp) {

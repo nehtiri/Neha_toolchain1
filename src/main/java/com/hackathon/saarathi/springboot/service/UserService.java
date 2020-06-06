@@ -6,7 +6,7 @@ import com.hackathon.saarathi.springboot.entity.User;
 
 
 public interface UserService {
-	List<User> findAll();
+	//List<User> findAll();
 
 	/*void insertUser(User emp);
 

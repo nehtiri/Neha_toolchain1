@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SaarathiApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Saarathi Application started");
 		SpringApplication.run(SaarathiApplication.class, args);
 	}
 
