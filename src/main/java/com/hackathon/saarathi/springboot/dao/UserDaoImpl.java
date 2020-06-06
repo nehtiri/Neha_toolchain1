@@ -23,7 +23,7 @@ import com.hackathon.saarathi.springboot.mapper.UserRowMapper;
 @Repository
 public class UserDaoImpl implements UserDao{
 	
-	@Autowired
+	/*@Autowired
 	public UserDaoImpl(NamedParameterJdbcTemplate template) {  
         this.template = template;  
 }  
@@ -32,7 +32,7 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public List<User> findAll() {
 		return template.query("select * from user_details", new UserRowMapper());
-	}
+	}*/
 	
 	/*
 	 * @Override public void insertUser(User emp) {

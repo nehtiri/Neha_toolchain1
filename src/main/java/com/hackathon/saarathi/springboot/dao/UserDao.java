@@ -7,7 +7,7 @@ import com.hackathon.saarathi.springboot.entity.User;
 
 public interface UserDao {
 
-	public List<User> findAll();
+	//public List<User> findAll();
 
 	/*public void insertUser(User emp);
 
