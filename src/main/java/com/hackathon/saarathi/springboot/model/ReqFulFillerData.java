@@ -1,6 +1,7 @@
-package com.hackathon.saarathi.springboot.entity;
+package com.hackathon.saarathi.springboot.model;
 
 import lombok.AllArgsConstructor;
+
 import lombok.Data;
 
 @Data

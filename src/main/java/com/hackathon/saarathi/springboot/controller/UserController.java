@@ -1,35 +1,57 @@
 package com.hackathon.saarathi.springboot.controller;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-
 
 import javax.annotation.Resource;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hackathon.saarathi.springboot.entity.User;
-import com.hackathon.saarathi.springboot.service.UserService;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hackathon.saarathi.springboot.model.User;
+
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
-	@Resource 
-	UserService userService;
 	
 	@GetMapping(value = "/userList")
-	public void getUsers() {
+	public List<User> getUsers() {
 		
 		System.out.println("Hello");
-		//return userService.findAll();
+		
+		
+		ObjectMapper mapper = new ObjectMapper();
+
+		//JSON file to Java object
+		User obj = null;
+		
+		//ResourceUtils.getFile(
+   // "classpath:data/employees.dat")
+		try {
+			obj = mapper.readValue(new ClassPathResource(
+				      "data/User.json").getFile(), User.class);
+		} catch (JsonParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JsonMappingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return Arrays.asList(obj);
 	
 	}
 	

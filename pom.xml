@@ -24,10 +24,15 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
+	<groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-databind</artifactId>
+	<version>2.9.8</version>
+</dependency>
+		  <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
@@ -41,7 +46,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+		-->
 		<dependency>
     		<groupId>org.projectlombok</groupId>
     		<artifactId>lombok</artifactId>
@@ -49,7 +54,7 @@
     		<scope>provided</scope>
 		</dependency>
 		
-		<dependency>
+		<!-- <dependency>
             <groupId>com.ibm.cloud</groupId>
             <artifactId>ibm-cloud-spring-boot-service-bind</artifactId>
             <version>1.1.2</version>
@@ -59,7 +64,7 @@
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>1.26</version>
-        </dependency>
+        </dependency> -->
 		
 	</dependencies>
 
