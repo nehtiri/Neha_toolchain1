@@ -22,7 +22,7 @@ import com.hackathon.saarathi.springboot.mapper.UserRowMapper;
 
 public class OrderDaoImpl implements OrderDao  {
 
-	public OrderDaoImpl(NamedParameterJdbcTemplate template) {  
+	/*public OrderDaoImpl(NamedParameterJdbcTemplate template) {  
         this.template = template;  
 }  
 	NamedParameterJdbcTemplate template;  
@@ -92,6 +92,6 @@ public class OrderDaoImpl implements OrderDao  {
 			    }  
 			});  				
 	}
-
+*/
 
 }

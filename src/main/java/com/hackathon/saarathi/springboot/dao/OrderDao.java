@@ -6,12 +6,12 @@ import com.hackathon.saarathi.springboot.entity.Order;
 
 public interface OrderDao {
 
-	public List<Order> findAll();
+	/* public List<Order> findAll();
 
 	public void insertOrder(Order order);
 
 	public void executeUpdateOrder(Order order);
 
 	public void deleteOrder(Order order);
-
+*/
 }

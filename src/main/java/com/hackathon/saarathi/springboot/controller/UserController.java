@@ -32,7 +32,7 @@ public class UserController {
 	}
 	
 	
-	@GetMapping(value = "/getUsersByCategory")
+	/*@GetMapping(value = "/getUsersByCategory")
 	public List<User> getUsersByCategory(@RequestParam String category) {
 		return userService.getUsersByCategory(category);
 	
@@ -59,6 +59,6 @@ public class UserController {
 		 userService.deleteUser(emp);
 	
 	}
-	
+	*/
 	
 }

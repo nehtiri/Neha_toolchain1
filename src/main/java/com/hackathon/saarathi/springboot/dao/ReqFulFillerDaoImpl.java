@@ -23,7 +23,7 @@ import com.hackathon.saarathi.springboot.mapper.UserRowMapper;
 @Repository
 public class ReqFulFillerDaoImpl implements ReqFulFillerDao {
 
-	NamedParameterJdbcTemplate template;  
+	/*NamedParameterJdbcTemplate template;  
 
 
 	public ReqFulFillerDaoImpl(NamedParameterJdbcTemplate template) {  
@@ -97,5 +97,5 @@ public class ReqFulFillerDaoImpl implements ReqFulFillerDao {
 			    }  
 			});  		
 	}
-
+*/
 }

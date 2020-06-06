@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService{
 		return userDao.findAll();
 	}
 	
-	@Override
+	/*@Override
 	public void insertUser(User emp) {
 		userDao.insertUser(emp);
 		
@@ -45,5 +45,5 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public List<User> getUsersByCategory(String category) {
 		return userDao.getUsersByCategory(category);
-	}
+	} */
 }

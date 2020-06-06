@@ -9,7 +9,7 @@ public interface UserDao {
 
 	public List<User> findAll();
 
-	public void insertUser(User emp);
+	/*public void insertUser(User emp);
 
 	public void updateUser(User emp);
 
@@ -17,5 +17,5 @@ public interface UserDao {
 
 	public void deleteUser(User emp);
 
-	public List<User> getUsersByCategory(String category);
+	public List<User> getUsersByCategory(String category);*/
 }
