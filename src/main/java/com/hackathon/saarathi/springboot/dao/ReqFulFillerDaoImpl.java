@@ -33,7 +33,6 @@ public class ReqFulFillerDaoImpl implements ReqFulFillerDao {
 	@Override
 	public List<ReqFulFillerData> findAll() {
 		return template.query("select * from requester_fulfiller", new ReqFulFillerRowMapper());
-		template.getDataSource().getConnection().close();
 	}
 
 	@Override
