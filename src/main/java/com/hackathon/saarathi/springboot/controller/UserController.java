@@ -27,10 +27,13 @@ public class UserController {
 	UserService userService;
 	
 	@GetMapping(value = "/userList")
-	public void getUsers() {
+	public List<User> getUsers() {
 		
+		System.out.println("Hello");
+		return userService.findAll();
 	
 	}
+	
 	
 	
 	/*@GetMapping(value = "/getUsersByCategory")
