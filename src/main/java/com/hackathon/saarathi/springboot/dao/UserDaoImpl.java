@@ -10,6 +10,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCallback;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -25,14 +26,12 @@ import com.hackathon.saarathi.springboot.mapper.UserRowMapper;
 public class UserDaoImpl implements UserDao{
 	
 	@Autowired
-	public UserDaoImpl(NamedParameterJdbcTemplate template) {  
-        this.template = template;  
-}  
-	NamedParameterJdbcTemplate template;  
-
+	JdbcTemplate jdbcTemplate;
+	
+	
 	@Override
 	public List<User> findAll() {
-		return template.query("select * from user_details", new UserRowMapper());
+		return jdbcTemplate.query("select * from user_details", new UserRowMapper());
 	}
 	
 	/*
