@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,22 +17,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cloudant.client.api.CloudantClient;
 import com.hackathon.saarathi.springboot.model.User;
-import com.hackathon.saarathi.springboot.service.UserService;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-	@Resource 
-	UserService userService;
+	@Autowired 
+	CloudantClient 	cloudantClient;
+	
 	
 	@GetMapping(value = "/userList")
-	public List<User> getUsers() {
+	public String getUsers() {
 		
 		System.out.println("Hello");
-		return userService.findAll();
+		//return userService.findAll();
+		List<String> list = null;
+		try
+		{
+		 list = cloudantClient.getAllDbs();
 	
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return "Your cloudant application is running with "+list;
 	}
 	
 	
